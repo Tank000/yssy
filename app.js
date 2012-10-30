@@ -16,6 +16,7 @@ app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
+  app.use(express.static(path.join(__dirname, 'public')));
   app.use(express.compress());
   app.use(partial());
   app.use(express.favicon());
@@ -23,7 +24,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(express.static(path.join(__dirname, 'public')));
+  
 });
 
 app.configure('development', function(){
