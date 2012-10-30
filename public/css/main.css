@@ -1,0 +1,93 @@
+
+a.mybtn{
+    padding:8px;
+    background:#009a61;
+    color:#fff;
+    text-decoration:none;
+    border-radius:3px
+}
+a.redbtn{
+    padding:8px;
+    background:#C23C4C;
+    color:#fff;
+    text-decoration:none;
+    border-radius:3px
+}
+
+
+.bottom {
+    background:#ccc;
+    border-top:1px solid #ddd;
+    text-align:center;
+    min-height:40px;
+    line-height:40px
+}
+
+#board-info{
+  position:fixed;
+  top:80px;
+  left:40px;
+  z-index: 100;
+}
+
+#html {
+    width:98.5%;
+    min-height:200px;  
+}
+
+pre {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  color: #000;
+  background-color: transparent;
+  border:none;
+}
+
+.title{
+    margin:0 5px;
+    border-bottom:1px dotted #ddd;
+    padding:2px;
+    font-size:13px;
+    text-align:center
+}
+
+#water-fall {
+    padding-left: 80px; 
+}
+
+#cont-container {
+    padding-bottom: 30px; 
+}
+
+#cont-detail {
+    padding:0 20px 40px 20px; 
+    margin-top: 30px;
+    height:auto; 
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);/*ie*/
+    -moz-box-shadow: 2px 2px 2px #909090;/*firefox*/
+    -webkit-box-shadow: 2px 2px 3px #909090;/*safari或chrome*/
+    box-shadow:2px 2px 10px #909090;/*opera或ie9*/
+}
+
+.taglabel{
+  font-size: 14px;
+  text-decoration:none;
+  line-height: 14px;
+  color: #ddd;
+  background-color: #009A61;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  vertical-align: baseline;
+  padding: 1px 8px 2px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+a.taglabel:hover {
+  color: #fff;
+ text-decoration: none;
+}

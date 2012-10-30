@@ -1,0 +1,16 @@
+<% for(i in dataArr){%>
+  <div class="element  ACTIVE" id="cid_<%=dataArr[i]._id%>">
+        <h5 class='title'><%=dataArr[i].title%></h5>
+        <div style="padding:10px">
+            <a style="color:#009a61;text-decoration:none" href="/bbsqry?userid=<%=%>" target="_blank"><%=dataArr[i].author.id%></a>
+            <p><%=dataArr[i].time%></p>      
+            <%-dataArr[i].content%>
+            <br>
+        </div>
+    
+        <div class="bottom">
+            <a href="/bbscont/<%=dataArr[i]._id%>" class="mybtn" target="_blank">查看 ➔</a>
+        </div>
+</div>
+
+<%}%>

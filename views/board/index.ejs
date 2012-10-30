@@ -1,0 +1,49 @@
+<legend><%=board%></legend>
+<div class="container-fluid">
+<div class="row-fluid">
+    <div class="span2" ><%include info%></div>
+    <div id="container" class="span10"><%include list%></div>
+</div>
+ <%if(dataArr.length==25){%>   
+ <nav id="page_nav">
+    <a href="/page/2?board=<%=board%>"></a>
+  </nav>
+<%}%>
+</div>
+<script>
+var $container = $('#container');
+$(function(){
+    $container.isotope({
+        layoutMode: 'masonry',
+        itemSelector : '.element',
+        // getSortData : {
+        //     category : function( $elem ) {
+        //         return $elem.attr('data-category');
+        //     }
+        // },
+        // sortBy: 'category'
+        
+    });
+
+    // $("#filters a").bind("click",function() {
+    //     var selector = $(this).attr('data-filter'); 
+    //     $container.isotope({ filter: selector }); 
+    //     return false; 
+    // });
+
+    $container.infinitescroll({
+        navSelector  : '#page_nav',    // selector for the paged navigation 
+        nextSelector : '#page_nav a',  // selector for the NEXT link (to page 2)
+        itemSelector : '.element',     // selector for all items you'll retrieve
+        loading: {
+            finishedMsg: '没有内容啦！',
+            msg: '加载中···'
+          }
+        },
+        // call Isotope as a callback
+        function( newElements ) {
+          $container.isotope( 'appended', $( newElements ) ); 
+        }
+    );
+})
+ </script>
