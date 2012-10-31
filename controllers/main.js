@@ -1,5 +1,7 @@
 
 
 exports.index = function(req, res) {
-    res.render('index');
+    if(req.session)
+        res.redirect('login')
+    else res.render('index');
 }

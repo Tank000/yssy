@@ -1,5 +1,7 @@
 var db_atl = require('../libs/mongodb').article;
 var utils  = require('../libs/utils');
+var _get   = require('../libs/client').get;
+var fs     = require('fs');
 
 
 /************************************************/
@@ -14,4 +16,12 @@ exports.view = function(req, res) {
         })       
     }
     
+}
+
+exports.file = function(req, res) {
+    var path = req.path;
+    console.log(path+'------');
+    _get(path,function(data){
+        res.end(data);
+    })
 }
