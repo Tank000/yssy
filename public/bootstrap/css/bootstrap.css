@@ -1003,7 +1003,7 @@ input[type="color"],
 input,
 textarea,
 .uneditable-input {
-  width: 206px;
+  width: 146px;
 }
 
 textarea {
@@ -5827,7 +5827,7 @@ a.badge:hover {
   left: 0;
   padding: 15px;
   background: #333333;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .carousel-caption h4,

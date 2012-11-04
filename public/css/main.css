@@ -28,6 +28,7 @@ a.redbtn{
   top:80px;
   left:40px;
   z-index: 100;
+  border:solid 2px #d0d0d0;
 }
 
 #html {

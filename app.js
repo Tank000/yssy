@@ -35,6 +35,20 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+
+app.all('/*', function (req, res,next) {
+    if(req.url.indexOf('/login')!=-1||req.session.uid){
+        res.locals({
+          session: req.session
+        });
+        return next();
+    }else{
+         console.log(req.url);
+        req.session.lasturl=req.url;
+        return res.redirect('/login');
+    }
+});
+
 routes(app);
 
 http.createServer(app).listen(app.get('port'), function(){

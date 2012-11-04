@@ -9,6 +9,8 @@ var login   = require('./controllers/login');
 exports = module.exports = function(app) {
     app.get   ('/'             , main.index);
     app.get   ('/login'        , login.index);
+    app.get   ('/logout'        , login.logout);
+    app.post  ('/login'        , login.check);
 	app.get   ('/bbsdoc'       , board.list);
     app.get   ('/bbscont/:id'  , article.view);
     app.get   ('/page/:id'     , page.next);
