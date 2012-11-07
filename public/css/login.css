@@ -1,0 +1,331 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: #000;
+    font: 15px/400 Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;;
+    color: #aa3e03;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#loginform {
+    position: absolute; 
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:5px;
+    padding-bottom:5px;
+    width: 280px; 
+    height:200px;
+    top: 25%; 
+    left: 0%;
+    background: rgba(0,0,0,0.6); 
+}
+#loginform .input {
+    display: block;
+    border: 1px solid #555;
+    margin-top: 20px; 
+    padding-left: 10px;
+    padding-right: 10px;
+    background: transparent; 
+    width: 90%; 
+    height:40px;
+    font-size: 14px; 
+    color: #fff; 
+    border: 1px #ddd solid;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: rgba(0,0,0,0.4) 0px 6px 6px -6px inset;    
+
+}
+
+/*.submit{
+    display: block;
+    width: 97%;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    color: rgba(0,0,0,0.75);
+    text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+    -webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.2), 0px -1px 0px rgba(255,255,255,0.3) inset;
+    -moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.2), 0px -1px 0px rgba(255,255,255,0.3) inset;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2), 0px -1px 0px rgba(255,255,255,0.3) inset;
+    border-radius: 4px;
+    border: 0px solid #ddd;
+        background-image: -webkit-linear-gradient(transparent, rgba(0,0,0,0.35));
+    background-image: -moz-linear-gradient(transparent, rgba(0,0,0,0.35));
+    background-color: #FFD000;
+    cursor:  pointer;
+}
+
+#subtn:active ,#subtn:focus {
+    -webkit-box-shadow: 0px 0px 20px #555;
+    -moz-box-shadow: 0px 0px 20px #aaa; 
+    box-shadow: 0px 0px 20px #555;  
+    cursor:  pointer;
+
+}*/
+        
+input.submit {
+    display: block;  
+    width: 97%;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    color: #eee; 
+    text-transform: uppercase; 
+    background-color: #18a5cc;
+    border: none;
+    
+    /* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+    -webkit-transition: -webkit-box-shadow 0.3s linear;
+    
+    /* -- CSS3 - Rounded Corners -- */
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px;
+    border-radius: 4px; 
+                    
+    /* -- CSS3 Shadow - create a shadow around each input element -- */ 
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#18a5cc), to(#0a85a8)); 
+    background: -moz-linear-gradient(25% 75% 90deg,#0a85a8, #18a5cc);       
+} 
+
+input.submit:hover {        
+    -webkit-box-shadow: 0px 0px 20px #aaa;
+    -moz-box-shadow: 0px 0px 20px #aaa; 
+    box-shadow: 0px 0px 20px #aaa;  
+    cursor:  pointer; 
+}
+
+
+
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+.cb-slideshow:after { 
+    content: '';
+    background: transparent url(/images/pattern.png) repeat top left; 
+}
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*-webkit-filter: blur(3px);*/
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 30s linear infinite 0s;
+    -moz-animation: imageAnimation 30s linear infinite 0s;
+    -o-animation: imageAnimation 30s linear infinite 0s;
+    -ms-animation: imageAnimation 30s linear infinite 0s;
+    animation: imageAnimation 30s linear infinite 0s; 
+}
+.cb-slideshow li div { 
+    z-index: 1000;
+    position: absolute;
+    bottom: 5%;
+    left: 0px;
+    width: 20%;
+    height: 14%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);;
+    opacity: 0;
+    color: #fff;
+    -webkit-animation: titleAnimation 30s linear infinite 0s;
+    -moz-animation: titleAnimation 30s linear infinite 0s;
+    -o-animation: titleAnimation 30s linear infinite 0s;
+    -ms-animation: titleAnimation 30s linear infinite 0s;
+    animation: titleAnimation 30s linear infinite 0s; 
+}
+.cb-slideshow li div h3 { 
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10px;
+    font-size: 40px;
+    padding: 0;
+    line-height: 40px; 
+    text-shadow:0px 0px 19px #969096;
+}
+
+.cb-slideshow li div p { 
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    font-size: 26px;
+    padding: 0;
+    line-height: 26px; 
+    text-shadow:0px 0px 19px #969096;
+}
+
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url('https://bbs.sjtu.edu.cn/file/bbs/index/default1.jpg') ;
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url('https://bbs.sjtu.edu.cn/file/bbs/index/default2.jpg');
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url("https://bbs.sjtu.edu.cn/file/bbs/index/bbsweb_review/entryhtml/entrypics/1012maxims.jpg");
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url("https://bbs.sjtu.edu.cn/file/bbs/index/bbsweb_review/entryhtml/entrypics/1102yanzi.jpg");
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url('https://bbs.sjtu.edu.cn/file/bbs/index/bbsweb_review/entryhtml/entrypics/1104juhui02.jpg');
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s; 
+}
+
+.cb-slideshow li:nth-child(2) div { 
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) div { 
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) div { 
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) div { 
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s; 
+}
+
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -webkit-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -webkit-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -moz-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -moz-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -o-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -o-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -ms-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -ms-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+/* Animation for the title */
+@-webkit-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-moz-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-o-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-ms-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+/* Show at least something when animations not supported */
+.no-cssanimations .cb-slideshow li span{
+    opacity: 1;
+}
+
+@media screen and (max-width: 1140px) { 
+    .cb-slideshow li div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) { 
+    .cb-slideshow li div h3 { font-size: 80px }
+}
