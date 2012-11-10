@@ -1,13 +1,14 @@
 <div id="board-info">
-    <h5 class="title">PPPerson(美丽人物)</h5>
-    <div style="padding:10px;">
-      <p>版主:</p>
-      <a style="color:#009a61;text-decoration:none" href="/bbsqry?userid=Oct" target="_blank">Oct</a>            
+    <h4 class="title"><%=boardInfo.name%><br>(<%=boardInfo.cn_name%>)</h4>
+    <div class="sidebar">
+        <ul class="nav nav-list bs-docs-sidenav affix-top">
+          <li><a href="#typography">版内查询➔<i class="icon-chevron-right"></i></a></li>
+          <li><a href="#code">发表文章➔<i class="icon-chevron-right"></i></a></li>
+          <li><a href="#tables">精华区➔<i class="icon-chevron-right"></i></a></li>
+        </ul>
     </div>
     <div class="bottom">
+        <a class="mybtn" href="#">列表查看<i class="icon-th"></i></a>
+        <a class="mybtn" href="#">网格查看<i class="icon-list"></i></a>
     </div>
-      <div class="btn-group">
-        <a class="btn" href="#"><i class="icon-th"></i></a>
-        <a class="btn" href="#"><i class="icon-list"></i></a>
-      </div>
 </div>

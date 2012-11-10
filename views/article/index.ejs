@@ -1,28 +1,28 @@
 <div class="container-fluid">
   <div id="cont-container" class="row-fluid">
-      <div class="span2 bs-docs-sidebar">
-        <ul class="nav nav-list bs-docs-sidenav affix">
-          <li class="active"><a href="#global"><i class="icon-chevron-right"></i> Global styles</a></li>
-          <li class=""><a href="#gridSystem"><i class="icon-chevron-right"></i> Grid system</a></li>
-          <li class=""><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Fluid grid system</a></li>
-          <li class=""><a href="#layouts"><i class="icon-chevron-right"></i> Layouts</a></li>
-          <li><a href="#responsive"><i class="icon-chevron-right"></i> Responsive design</a></li>
-        </ul>
-      </div>
-    <div id="cont-detail" class="span7">
+    <div id="cont-detail" class="span6">
       <ul class="pager">
       <li class="previous">
         <a href="/prev/<%=cont._id%>?board=<%=cont.board%>">&larr; 上一条</a>
       </li>
+      <li><a href="#">发表新帖</a></li>
+      <li><a href="#">回复本贴</a></li>
+      <li><a href="#">转帖</a></li>
+      <li><a href="#">编辑</a></li>
+      <li><a href="#">删除</a></li>
       <li class="next">
         <a href="/next/<%=cont._id%>?board=<%=cont.board%>">下一条 &rarr;</a>
       </li>
     </ul>
-      <h4><%=cont.title%></h4>
-      <p><%=cont.author.id%></p>
+      <legend><%=cont.title%><a href="#" style="float:right;"><%=cont.author.id%></a></legend>
+      <p style="float:right;font-size:14px;margin-top:-10px;"><%=cont.time%></p>
       <div class="cont">
         <pre><%-cont.content%></pre>
       </div>  
+    </div>
+    <div id="cont-cms" class="span6">
+        
+      </div>
     </div>
   </div>
 </div>

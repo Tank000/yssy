@@ -38,7 +38,7 @@ exports.thin = function (str){
   if(str){
     str = decodeHtml(str);
     str = str.replace(/\s+/g,'').replace(/<(?:.|\s)*?>/g,"");
-    if(str.length>300)  str = str.substring(0,300);
+    if(str.length>300)  str = str.substring(0,200);
   }
   return str;
 }

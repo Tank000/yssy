@@ -43,7 +43,7 @@ exports.redir = function(req, res,next) {
     db_atl.find(doc,{'_id':1}).sort(sort).limit(1).toArray(function (err,data){
         if(err) return next(err)
         if(data.length==0){
-            db_atl.find(doc,{'_id':1}).sort(sort).limit(1).toArray(function (err,data){
+            db_atl.find({},{'_id':1}).sort(sort).limit(1).toArray(function (err,data){
                 if(err) return next(err)
                 else res.redirect('/bbscont/'+data[0]._id)
             })

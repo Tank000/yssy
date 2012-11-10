@@ -1,3 +1,15 @@
+body{
+  background: url("/images/bg.png");
+  background-color: #F3F3F3;
+  color:#505050;
+}
+#copyright {
+z-index: -1;
+position: fixed;
+color: #9E9E9E;
+bottom: 20px;
+right: 50px;
+}
 
 a.mybtn{
     padding:8px;
@@ -14,6 +26,12 @@ a.redbtn{
     border-radius:3px
 }
 
+.container-fluid  {
+    padding-top: 40px;
+}
+#container{
+  background-color: rgba(0,0,0,0.1);
+}
 
 .bottom {
     background:#ccc;
@@ -23,12 +41,37 @@ a.redbtn{
     line-height:40px
 }
 
+.element .hover{
+    background-color: rgba(0,0,0,0);
+    opacity: 0.1;
+    text-align:center;
+    height:100%;
+    width:100%;
+    position: absolute;
+    bottom:0;
+    z-index: 100;
+}
+
+.element .hover:hover{
+    background-color: #345;
+}
+.element .hover a{
+  z-index: 101;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 #board-info{
   position:fixed;
   top:80px;
-  left:40px;
+  left:10px;
   z-index: 100;
-  border:solid 2px #d0d0d0;
+}
+
+.sidebar{
+  padding: 10px;
 }
 
 #html {
@@ -42,7 +85,7 @@ pre {
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  color: #000;
+  color: #505050;
   background-color: transparent;
   border:none;
 }
@@ -51,27 +94,32 @@ pre {
     margin:0 5px;
     border-bottom:1px dotted #ddd;
     padding:2px;
-    font-size:13px;
-    text-align:center
+    text-align:center;
+    color:#505050;
 }
+
 
 #water-fall {
     padding-left: 80px; 
 }
 
-#cont-container {
-    padding-bottom: 30px; 
-}
 
 #cont-detail {
     padding:0 20px 40px 20px; 
-    margin-top: 30px;
-    height:auto; 
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);/*ie*/
-    -moz-box-shadow: 2px 2px 2px #909090;/*firefox*/
-    -webkit-box-shadow: 2px 2px 3px #909090;/*safari或chrome*/
-    box-shadow:2px 2px 10px #909090;/*opera或ie9*/
+    margin-left: 0px;
+    height:auto;
+    background-color: rgba(0,0,0,0.1); 
+/*    filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=60,strength=2);
+    -webkit-box-shadow: 1px 2px 5px #909090;
+       -moz-box-shadow: 1px 2px 5px #909090;
+            box-shadow: 1px 2px 5px #909090;*/
 }
+#cont-cms {
+  padding: 10px;
+  /*background: url("/images/cms_bg.png") 0 0 repeat;*/
+  background-color: rgba(0,0,0,0.1);
+}
+
 
 .taglabel{
   font-size: 14px;

@@ -1,12 +1,8 @@
 /* Sidenav for Docs
 -------------------------------------------------- */
-body{
-  background-color: #F3F3F3;
-}
+
 .bs-docs-sidenav {
-  margin: 10px 0 0;
   padding: 0;
-  padding-left: 10px;
   background-color: #eee;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;

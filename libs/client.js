@@ -44,7 +44,7 @@ exports.get = function(path,callback){
         if(req_timeout) {
               clearTimeout(req_timeout);
               //console.log("Got error: " + e.message);
-              callback(null );
+              callback(null);
         }
     });
     req.end();

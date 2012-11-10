@@ -162,7 +162,9 @@ body {
 #container {
   border: none;
   padding: 5px;
+  margin-left: 0;
   margin-bottom: 20px;
+
 }
 
 .element {
@@ -170,21 +172,21 @@ body {
   min-height: 100px;
   font-size:14px;
   line-height:1.7;
-  color:#444;
+  color:#505050;
   height: auto;
-  margin: 10px;
+  margin: 2px;
   float: left;
   overflow: hidden;
   position: relative;
   background: #FFF;
-  -webkit-border-top-right-radius: 1.2em;
-  -moz-border-radius-topright: 1.2em;
-  border-top-right-radius: 1.2em;
-  filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);/*ie*/
-  -moz-box-shadow: 2px 2px 5px #909090;/*firefox*/
-  -webkit-box-shadow: 2px 2px 5px #909090;/*safari或chrome*/
-  box-shadow:2px 2px 10px #909090;/*opera或ie9*/
+  /*-webkit-border-top-right-radius: 1.2em;*/
+  /*-moz-border-radius-topright: 1.2em;*/
+  /*border-top-right-radius: 1.2em;*/
+  box-shadow:1px 2px 5px #909090;
+  -moz-box-shadow: 1px 2px 5px #909090;
+  -webkit-box-shadow: 1px 2px 5px #909090;
 }
+
 
 
 /**** Example Options ****/
@@ -457,7 +459,7 @@ footer {
 }
 
 pre {
-  padding: 10px;
+  padding: 1px;
 }
 
 pre, code {
