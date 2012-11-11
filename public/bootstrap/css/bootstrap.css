@@ -568,8 +568,8 @@ a:hover {
 }
 
 .container-fluid {
-  padding-right: 20px;
-  padding-left: 20px;
+  /*padding-right: 20px;*/
+  /*padding-left: 20px;*/
   *zoom: 1;
 }
 
@@ -4178,7 +4178,7 @@ input[type="submit"].btn.btn-mini {
   min-height: 40px;
   padding-right: 20px;
   padding-left: 20px;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.6);
 /*  background-color: #fafafa;
   background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
@@ -4187,13 +4187,6 @@ input[type="submit"].btn.btn-mini {
   background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
   background-repeat: repeat-x;*/
 
-  border-bottom-color: rgba(0,0,0,0.2);
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
   *zoom: 1;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
      -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
@@ -4226,8 +4219,8 @@ input[type="submit"].btn.btn-mini {
   padding: 10px 20px 10px;
   margin-left: -20px;
   font-size: 20px;
-  font-weight: 200;
-  color: #505050;
+  font-weight: bold;
+  color: #F0F4FF;
 }
 
 .navbar .brand:hover {
@@ -4416,8 +4409,12 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a {
   float: none;
   padding: 10px 15px 10px;
-  color: #505050;
+  color: #F0F4FF;
+  font-weight: bold;
   text-decoration: none;
+  padding-bottom: -2px;
+  border-bottom: 2px solid;
+  border-bottom-color: rgba(0,0,0,0);
   /*text-shadow: 0 1px 0 #ffffff;*/
 }
 
@@ -4427,8 +4424,12 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
-  background:rgba(0,0,0,0.2);
+  background:rgba(255,255,255,0.7);
+  color:#505050;
   text-decoration: none;
+  padding-bottom: -2px;
+  border-bottom: 2px solid #08c;
+  border-bottom-color: #08c;
 }
 
 .navbar .nav > .active > a,

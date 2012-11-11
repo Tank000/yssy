@@ -12,11 +12,11 @@ exports.next = function(req, res) {
     var board = req.query.board;
     var doc = {};
     if(board) doc['board'] = board; 
-    db_atl.find(doc,{'title':1,'content':1,'author':1,'time':1,'reid':1}).sort({'_id':-1}).skip(25*(index-1)).limit(25).toArray(function (err,dataArr){
+    db_atl.find(doc,{'title':1,'body':1,'author':1,'time':1,'reid':1}).sort({'_id':-1}).skip(25*(index-1)).limit(25).toArray(function (err,dataArr){
         if(err) return next(err)
         if(dataArr.length==0) return res.send(404);
         dataArr.forEach(function(result){
-            result.content  = utils.thin(result.content);
+            result.body  = utils.thin(result.body);
         })
         res.render('board/list',{dataArr:dataArr,next:++index,layout:false});
     })

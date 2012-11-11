@@ -12,7 +12,7 @@ exports.view = function(req,res,next) {
     if(aid&&aid.length==24){
         db_atl.findById(aid,function (err,data){
             if(err) return next(err)
-                console.log(data.comments);
+            console.log(data);
             res.render('article',{cont:data});
         })       
     }
